@@ -12,17 +12,16 @@ struct Stack {
 
 struct Alloc {
     struct Stack *stack;
-    size_t memory_usage;
-    size_t overhead;
+    unsigned long memory_usage;
+    unsigned long overhead;
 };
-
 
 DSAllocator dsalloc_new(void)
 {
     struct Alloc *a = malloc(sizeof(*a));
     a->stack = NULL;
     a->memory_usage = 0;
-    a->overhead = 0;
+    a->overhead = sizeof(*a);
     return (DSAllocator)a;
 }
 
