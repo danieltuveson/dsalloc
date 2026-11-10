@@ -1,6 +1,6 @@
 CFLAGS=-O2 -g -Wall -Wextra
 
-dsalloc: dsalloc.o
+libdsalloc.a: dsalloc.o
 	ar rc libdsalloc.a dsalloc.o
 
 example: example.c dsalloc.o
