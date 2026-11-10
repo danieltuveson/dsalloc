@@ -10,7 +10,7 @@ dsalloc.o: dsalloc.c dsalloc.h
 	cc $(CFLAGS) -c dsalloc.c
 
 # Install in debian local lib / include folders
-install:
+install: libdsalloc.a
 	@sudo cp libdsalloc.a /usr/local/lib && echo "libdsalloc.a installed at /usr/local/lib"
 	@sudo cp dsalloc.h /usr/local/include && echo "dsalloc.h installed at /usr/local/include"
 
