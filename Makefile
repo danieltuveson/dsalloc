@@ -16,5 +16,6 @@ install: libdsalloc.a
 
 clean:
 	rm -f *.o
+	rm libdsalloc.a
 	rm -f example
 
